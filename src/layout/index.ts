@@ -8,6 +8,7 @@ import Registercontent from './Registercontent/Registercontent';
 import ProfileHeader from './ProfileHeader/ProfileHeader';
 import ProfileLinks from './ProfileLinks/ProfileLinks';
 import ProfileStats from './ProfileStats/ProfileStats';
+import ProfileTransactions from './ProfileTransactions/ProfileTransactions';
 export {
     Header,
     Footer,
@@ -18,5 +19,6 @@ export {
     Registercontent,
     ProfileHeader,
     ProfileLinks,
-    ProfileStats
+    ProfileStats,
+    ProfileTransactions
 }

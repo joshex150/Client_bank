@@ -1,5 +1,5 @@
 import React, { useState, lazy, Suspense, useEffect, useContext } from "react";
-import { ProfileHeader, ProfileStats, ProfileLinks } from "../../layout";
+import { ProfileHeader, ProfileStats, ProfileLinks, ProfileTransactions } from "../../layout";
 import useLocalStorage from "../../hook/useLocalStorage";
 import { useNavigate } from "react-router-dom";
 import { AES, enc } from "crypto-ts";
@@ -90,6 +90,7 @@ const Profile: React.FC<Props> = (props) => {
               <ProfileLinks links={links} />
             </section>
             <PayStack></PayStack>
+            <ProfileTransactions />
           </div>
         </Suspense>
       </ErrorBoundary>

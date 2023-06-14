@@ -8,11 +8,12 @@ import "./style.scss";
 const ProfileTransactions: React.FC = () => {
   const { removeStorage } = useLocalStorage();
   const { user, onUserChange, logout } = useContext(userContext);
-  const decryptedBytes = AES.decrypt(user, "07052580111");
-  const decryptedData = decryptedBytes.toString(enc.Utf8);
-  const flag = decryptedData ? JSON.parse(decryptedData) : {};
   const [invoice, setinvoice] = useState<any[]>([]);
   useEffect(() => {
+    const decryptedBytes = AES.decrypt(user, "07052580111");
+    const decryptedData = decryptedBytes.toString(enc.Utf8);
+    const flag = decryptedData ? JSON.parse(decryptedData) : {};
+    
     const fetchInvoices = async () => {
       try {
         const response = await fetch(
@@ -42,20 +43,20 @@ const ProfileTransactions: React.FC = () => {
   }, []);
 
   const formatTimestamp = (timestamp: string) => {
-   const date = new Date(timestamp);
-   const formattedDate = date.toLocaleDateString("en-GB", {
-     day: "2-digit",
-     month: "2-digit",
-     year: "numeric",
-   });
-   const formattedTime = date.toLocaleTimeString("en-GB", {
-     hour: "2-digit",
-     minute: "2-digit",
-   });
-   return `${formattedDate} ${formattedTime}`;
- };
+    const date = new Date(timestamp);
+    const formattedDate = date.toLocaleDateString("en-GB", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+    });
+    const formattedTime = date.toLocaleTimeString("en-GB", {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+    return `${formattedDate} ${formattedTime}`;
+  };
   return (
-   <div style={{ marginTop: "20px" }}>
+    <div style={{ marginTop: "20px" }}>
       {invoice.length > 0 ? (
         invoice.map((inv: any, i) => (
           <div className="profile-transaction" key={i}>

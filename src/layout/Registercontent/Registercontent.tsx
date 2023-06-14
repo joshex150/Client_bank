@@ -242,7 +242,7 @@ const Registercontent: React.FC = (props) => {
                 placeholder="Password"
               />
             </div>
-            <Button onClick={register} style={{ background: "black" }}>
+            <Button onClick={register} style={{ background: "rgb(64, 25, 109)" }}>
               {" "}
               {loading ? (
                 <img width={20} src={loadingBar} alt="loading" />

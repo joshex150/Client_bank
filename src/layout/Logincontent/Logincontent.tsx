@@ -151,7 +151,7 @@ const Logincontent: React.FC = () => {
               />
 
               <Button
-                style={{ background: "black", width: "100%" }}
+                style={{ background: "rgb(64, 25, 109)", width: "100%" }}
                 onClick={login}
                 type="submit"
               >
@@ -176,7 +176,7 @@ const Logincontent: React.FC = () => {
               </span>
 
               <Link to="/register" style={{ color: "black" }}>
-                <Button style={{ background: "black", width: "100%" }}>
+                <Button style={{ background: "rgb(64, 25, 109)", width: "100%" }}>
                   Register
                 </Button>
               </Link>

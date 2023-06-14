@@ -68,7 +68,6 @@ export default function Slider() {
               </h2>
               <p className="slider-des" style={{ zIndex: "9999", color: "white", position: "relative" }}>{slider.description}</p>
               <div className="slider-buttons">
-                <Button style={{ zIndex: "9999", color: "white", position: "relative" }}>To shop</Button>
                 <Button style={{ color: "black", backgroundColor: "white", zIndex: "9999", position: "relative" }}>
                   Read More
                 </Button>

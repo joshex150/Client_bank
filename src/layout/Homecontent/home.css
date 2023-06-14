@@ -7,9 +7,8 @@
 }
 
 .box {
-  border: 1px solid white;
-  height: --webkit-fill-available; /* Adjust height as needed */
-  background-color: black;
+  border: 1px solid #ffffff6e;
+  background-color: #000000b3;
 }
 .box:hover {
   transform: scale(1.1);

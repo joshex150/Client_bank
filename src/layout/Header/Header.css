@@ -8,13 +8,28 @@
   position: absolute;
   top: 0.6rem;
   right: 2rem;
-  border-radius: 16px;
-  border: 0px;
-  color: var(--Dark);
-  background: white;
-  box-shadow: 0 3px 3px rgb(0 0 0 / 0.1);
   font-size: 18px;
   font-weight: 700;
+  display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 25px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border: none;
+    transition: all 0.6s ease 0s;
+    border-radius: 10px;
+    background: rgb(64, 25, 109);
+    height: 48px;
+    box-shadow: rgba(64, 25, 109, 0.25) 0px 4px 10px;
+    font-size: 16px;
+}.header-button:hover {
+  transform: translate3d(0,-3px,0);
 }
 .header-sub {
   width: 170px;
@@ -45,9 +60,6 @@
     right: 1rem;
     border-radius: 16px;
     border: 0px;
-    color: var(--Dark);
-    background: white;
-    box-shadow: 0 2px 2px rgb(0 0 0 / 0.08);
     font-size: large;
     font-weight: 700;
     padding: 10px;
@@ -77,11 +89,12 @@
 @media (prefers-color-scheme: light) {
   .Title {
     color: #ffffff;
+    fill: white;
   }
 }
 @media (prefers-color-scheme: dark) {
   .Title {
-      color: #000000;
+      color: white;
       fill: white;
     }
 }

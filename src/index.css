@@ -6,14 +6,14 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #2827272b;
+  background-color: #191919;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  background: url(/src/assets/pattern.jpg);
+  background: url("./assets/pattern.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -36,13 +36,12 @@ body {
 .header {
   background-color: #000000;
 }
-.container{
+.container {
   background-color: #000000;
 }
 @media (prefers-color-scheme: light) {
   :root {
-    color: #000000;
-    background-color: #ffffff;
+    color: rgba(255, 255, 255, 0.87);;
   }
   a:hover {
     color: #747bff;
@@ -59,7 +58,7 @@ body {
     color: white;
     margin: 10px 30px;
   }
-  .container{
+  .container {
     background-color: #ffffff;
   }
 }

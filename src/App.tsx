@@ -9,7 +9,6 @@ import { Home, Login, Register, Profile } from "./page";
 
 const App: React.FC = () => {
   const { removeStorage } = useLocalStorage();
-  const [show, setShow] = useState<boolean>(false);
   const { user, onUserChange, logout } = useContext(userContext);
   
   return (

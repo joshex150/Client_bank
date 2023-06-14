@@ -1,11 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import useLocalStorage from "./hook/useLocalStorage";
+import { userContext } from "./context/User/userContext";
 import "react-toastify/dist/ReactToastify.css";
 import { Header, Footer } from "./layout";
 import { Home, Login, Register, Profile } from "./page";
 
 const App: React.FC = () => {
+  const { removeStorage } = useLocalStorage();
+  const [show, setShow] = useState<boolean>(false);
+  const { user, onUserChange, logout } = useContext(userContext);
+  useEffect(() => {
+    const out = () => {
+      removeStorage("flag");
+      removeStorage("user");
+      logout();
+    };
+    out();
+  }, [])
+  
   return (
     <Router>
       <ToastContainer

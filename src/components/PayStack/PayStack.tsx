@@ -41,7 +41,7 @@ const PayStack: FC = () => {
   };
   const nunu = async () => {
     try {
-      const response = await fetch("http://localhost:3000/invoice", {
+      const response = await fetch("https://api-bank-xi.vercel.app/invoice", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -57,7 +57,7 @@ const PayStack: FC = () => {
       });
 
       if (response.ok) {
-        const resp = await fetch("http://localhost:3000/update", {
+        const resp = await fetch("https://api-bank-xi.vercel.app/update", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -68,7 +68,7 @@ const PayStack: FC = () => {
           }),
         });
         if (response.ok) {
-          const response = await fetch("http://localhost:3000/refresh", {
+          const response = await fetch("https://api-bank-xi.vercel.app/refresh", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

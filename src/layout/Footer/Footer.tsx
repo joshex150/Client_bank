@@ -22,7 +22,7 @@ const Footer = () => {
     try {
       setLoading(true);
 
-      const response = await fetch("http://localhost:3000/register/newsletter", {
+      const response = await fetch("https://api-bank-xi.vercel.app/register/newsletter", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -79,7 +79,7 @@ const Footer = () => {
           return;
         }
   
-        const response = await fetch("http://localhost:3000/subscription", {
+        const response = await fetch("https://api-bank-xi.vercel.app/subscription", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

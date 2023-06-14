@@ -42,7 +42,7 @@ const Registercontent: React.FC = (props) => {
     try {
       setLoading(true);
 
-      const response = await fetch("http://localhost:3000/signup", {
+      const response = await fetch("https://api-bank-xi.vercel.app/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -12,12 +12,9 @@ const App: React.FC = () => {
   const [show, setShow] = useState<boolean>(false);
   const { user, onUserChange, logout } = useContext(userContext);
   useEffect(() => {
-    const out = () => {
       removeStorage("flag");
       removeStorage("user");
       logout();
-    };
-    out();
   }, [])
   
   return (

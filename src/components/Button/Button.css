@@ -1,0 +1,33 @@
+.button-default {
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 0.4rem;
+    color: white;
+    cursor: pointer;
+    transition: all 200ms ease;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.button-default:hover {
+    background-color: var(--dark-primary-color);
+}
+
+.button-default.secoundry {
+    background-color: transparent;
+    border: 0.1rem solid rgba(0, 0, 0, 0.26);
+    color: rgba(0, 0, 0, 0.829) !important;
+    font-weight: 400;
+}
+
+.button-default.secoundry:hover {
+    background-color: rgba(0, 0, 0, 0.04) !important;
+}
+
+.button-default:disabled {
+    background-color: whitesmoke;
+    border: 1px solid #d0d0d0;
+    cursor: not-allowed;
+    color: black;
+}

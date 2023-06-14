@@ -1,0 +1,87 @@
+.header {
+  margin-bottom: 65px;
+}
+
+.header-button {
+  width: 170px;
+  height: 46px;
+  position: absolute;
+  top: 0.6rem;
+  right: 2rem;
+  border-radius: 16px;
+  border: 0px;
+  color: var(--Dark);
+  background: white;
+  box-shadow: 0 3px 3px rgb(0 0 0 / 0.1);
+  font-size: 18px;
+  font-weight: 700;
+}
+.header-sub {
+  width: 170px;
+  height: 46px;
+  position: absolute;
+  top: 0.6rem;
+  right: 2rem;
+  border-radius: 16px;
+  border: 0px;
+  background: rgba(38, 38, 38, 0.512);
+  box-shadow: 0 3px 3px rgb(0 0 0 / 0.1);
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+}
+.header-icon {
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+}
+
+@media only screen and (max-width: 1051px) {
+  .header-button {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0.8rem;
+    right: 1rem;
+    border-radius: 16px;
+    border: 0px;
+    color: var(--Dark);
+    background: white;
+    box-shadow: 0 2px 2px rgb(0 0 0 / 0.08);
+    font-size: large;
+    font-weight: 700;
+    padding: 10px;
+  }
+  .header-sub {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0.8rem;
+    right: 1rem;
+    border-radius: 16px;
+    border: 0px;
+    box-shadow: 0 2px 2px rgb(0 0 0 / 0.08);
+    font-size: large;
+    font-weight: 700;
+    padding: 10px;
+  }
+  .header-icon svg {
+    width: 50%;
+  }
+  .header-icon {
+    position: absolute;
+    top: 1.5rem;
+    left: 1rem;
+}
+}
+@media (prefers-color-scheme: light) {
+  .Title {
+    color: #ffffff;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .Title {
+      color: #000000;
+      fill: white;
+    }
+}

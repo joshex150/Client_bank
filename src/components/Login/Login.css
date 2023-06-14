@@ -1,0 +1,39 @@
+.login-form {
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.082);
+  background-color: white;
+  width: 40rem;
+  padding: 3.5rem;
+  border-radius: 0.2rem;
+  background: rgba(0, 0, 0, 0.724);
+  color: #000;
+}
+
+@media screen and (max-width: 520px) {
+  .login-form {
+    width: -webkit-fill-available;
+    padding: 2.5rem;
+    margin-top: 100px;
+    margin-bottom: 59px;
+    margin-left: 29px;
+    margin-right: 29px;
+    position: unset;
+    top: auto;
+    left: auto;
+    transform: translate(0%, 0%);
+  }
+
+  .login-background {
+    height: auto !important;
+  }
+}
+
+.login-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: calc(100vh - 10rem);
+}

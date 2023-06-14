@@ -12,7 +12,7 @@ const App: React.FC = () => {
         position="top-center"
         autoClose={5000}
         limit={1}
-        hideProgressBar={false}
+        hideProgressBar={true}
         newestOnTop={false}
         closeOnClick
         rtl={false}

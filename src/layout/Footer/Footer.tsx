@@ -22,7 +22,7 @@ const Footer = () => {
     try {
       setLoading(true);
 
-      const response = await fetch("https://api-bank-xi.vercel.app/register/newsletter", {
+      const response = await fetch("https://api-bank-xi.vercel.app/newsletter", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

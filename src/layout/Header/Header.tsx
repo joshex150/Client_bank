@@ -89,7 +89,7 @@ const Header = () => {
           className="header-sub"
           style={{ display: pathname === "/" && user ? "block" : "none" }}
         >
-          Balance: {flag?.balance || 0}
+          Balance: {flag?.balance.toLocaleString() || 0}
         </button>
         <button
           className="header-button"

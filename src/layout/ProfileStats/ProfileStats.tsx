@@ -21,7 +21,7 @@ const ProfileStats: React.FC<Props> = (props) => {
             <span>Account</span>
          </div>
          <div className="stats-balance">
-            <strong>{stats.accsDetails.balance}</strong>
+            <strong>{stats.accsDetails.balance.toLocaleString()}</strong>
             <span>Balance</span>
          </div>
          <div className="stats-messages">

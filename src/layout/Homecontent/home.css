@@ -1,0 +1,33 @@
+.containing {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  height: 579px;
+  margin: 0 50px;
+}
+
+.box {
+  border: 1px solid white;
+  height: --webkit-fill-available; /* Adjust height as needed */
+  background-color: black;
+}
+.box:hover {
+  transform: scale(1.1);
+}
+
+@media (min-width: 320px) and (max-width: 749px) {
+  .containing {
+    height: 261px;
+  }
+  .containing {
+    margin: 0 15px;
+  }
+}
+@media (min-width: 750px) and (max-width: 1049px) {
+  .containing {
+    height: 485px;
+  }
+  .containing {
+    margin: 0 25px;
+  }
+}

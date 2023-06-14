@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import sliderData from "../../data/sliderData";
@@ -7,6 +7,7 @@ import { Button } from "../../components";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { isMobile } from "react-device-detect";
 import "./Slider.css";
 
 // import required modules
@@ -19,6 +20,12 @@ export default function Slider() {
     }
     slides[index].classList.add("show");
   };
+
+  useEffect(() => {
+    if (isMobile) {
+      console.log(isMobile);
+    }
+  }, []);
 
   const handleCurrentSldier = (e: any): void => {
     const sliderContent: HTMLDivElement[] = [
@@ -42,26 +49,34 @@ export default function Slider() {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-       {sliderData.map((slider, i) => (
-        <SwiperSlide
-          key={i}
-          style={{ background: `url(${slider.imgUrl})`, backgroundSize: "cover" }}
-          className="slider-item"
-        >
-          <div className="slider-item__content">
-            <h2 className="slider-title">{slider.title}</h2>
-            <p className="slider-des">{slider.description}</p>
-            <div className="slider-buttons">
-              <Button >To shop</Button>
-              <Button
-                style={{ color: "black", backgroundColor: "white" }}
+        {sliderData.map((slider, i) => (
+          <SwiperSlide
+            key={i}
+            style={{
+              background: isMobile
+                ? `url(${slider.mobileImgUrl})`
+                : `url(${slider.imgUrl})`,
+              backgroundSize: "cover",
+            }}
+            className="slider-item tinted-background"
+          >
+            <div className="slider-item__content">
+              <h2
+                className="slider-title"
+                style={{ zIndex: "9999", color: "white", position: "relative" }}
               >
-                Read More
-              </Button>
+                {slider.title}
+              </h2>
+              <p className="slider-des" style={{ zIndex: "9999", color: "white", position: "relative" }}>{slider.description}</p>
+              <div className="slider-buttons">
+                <Button style={{ zIndex: "9999", color: "white", position: "relative" }}>To shop</Button>
+                <Button style={{ color: "black", backgroundColor: "white", zIndex: "9999", position: "relative" }}>
+                  Read More
+                </Button>
+              </div>
             </div>
-          </div>
-        </SwiperSlide>
-      ))}
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );

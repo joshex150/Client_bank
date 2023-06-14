@@ -39,9 +39,7 @@ const Home: React.FC = () => {
         <Slider/>
       <ErrorBoundary>
         <Suspense fallback={<Loader/>}>
-          <Container>
             <Homecontent/>
-          </Container>
         </Suspense>
       </ErrorBoundary>
     </div>

@@ -31,8 +31,6 @@ const Logincontent: React.FC = () => {
       if (loginPassword.length < 6) {
         toast('Password must be at least 6 characters long');
         return;
-      } else {
-        
       }
       const response = await fetch("https://api-bank-xi.vercel.app/login", {
         method: "POST",

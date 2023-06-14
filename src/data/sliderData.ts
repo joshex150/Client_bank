@@ -1,6 +1,6 @@
-import slider1 from '../assets/pattern4.jpg';
-import slider2 from '../assets/pattern4.jpg';
-import slider3 from '../assets/pattern4.jpg';
+import slider1 from "../assets/pattern4.jpg";
+import slider2 from "../assets/pattern4.jpg";
+import slider3 from "../assets/pattern4.jpg";
 
 interface ISliderData {
   imgUrl: string;
@@ -12,27 +12,24 @@ interface ISliderData {
 const sliderData: ISliderData[] = [
   {
     imgUrl: slider1,
-    title: 'Dare to defy?',
-    description:
-      "We have created an escape the shackles of what society's views as the norm now the choice is yours to break free and be you with our stylish Collections.",
-    shopUrl: '#',
-    productUrl: '#',
+    title: "Rebel Against Financial Mediocrity",
+    description: "Sick of the same old financial routines?",
+    shopUrl: "#",
+    productUrl: "#",
   },
   {
     imgUrl: slider2,
-    title: 'Get a new fit from us',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, urna eu tincidunt consectetur, nisi nunc pretium nisl, euismod.',
-    shopUrl: '#',
-    productUrl: '#',
+    title: "Unleash Your Financial Maverick",
+    description: "Ready to challenge the status quo?",
+    shopUrl: "#",
+    productUrl: "#",
   },
   {
     imgUrl: slider3,
-    title: 'Fashion made simple',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, urna eu tincidunt consectetur, nisi nunc pretium nisl, euismod.',
-    shopUrl: '#',
-    productUrl: '#',
+    title: "Shatter the Boundaries!",
+    description: "Tired of conforming to society's financial norms?",
+    shopUrl: "#",
+    productUrl: "#",
   },
 ];
 

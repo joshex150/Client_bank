@@ -11,11 +11,6 @@ const App: React.FC = () => {
   const { removeStorage } = useLocalStorage();
   const [show, setShow] = useState<boolean>(false);
   const { user, onUserChange, logout } = useContext(userContext);
-  useEffect(() => {
-      removeStorage("flag");
-      removeStorage("user");
-      logout();
-  }, [])
   
   return (
     <Router>

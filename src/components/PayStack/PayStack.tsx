@@ -41,6 +41,7 @@ const PayStack: FC = () => {
   };
   const nunu = async () => {
     try {
+      toast(`you successfully deposited ₦${amount/100}`)
       const response = await fetch("https://api-bank-xi.vercel.app/invoice", {
         method: "POST",
         headers: {

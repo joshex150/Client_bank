@@ -1,72 +1,20 @@
-// Colors
-$primary: #3c6cde;
-
-$light-gray:            #cbd8f3;
-$light-black:            #171717;
-$dark-black:             #090909;
-$navy-box-shadow:       rgba(131, 100, 238, 0.15);
-
-$body-bg: #f5f5f5;
-$body-color: $light-black;
-$input-color: $light-black;
-$input-placeholder-color: $light-black;
-
-$alt-danger:          #d9534f !default;
-
-// Fonts
-$font-family-sans-serif: Montserrat, "Open Sans", Roboto, Arial, sans-serif;
-$font-family-base: $font-family-sans-serif;
-$headings-font-weight: 700;
-
-.profile-links {
-   display: flex;
-   flex-direction: column;
-   box-shadow: 0 0 4.0625rem $navy-box-shadow;
-   margin-left: 0;
-   margin-right: 0;
-
-   a {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      padding: 0.9375rem 0.3125rem;
-      text-decoration: none;
-
-      &, &:hover {
-         text-decoration: none;
-      }
-
-      &:hover {
-         background-image: linear-gradient(to right, $light-black 0%, $dark-black 100%);
-
-         i, span {
-            color: #fff;
-         }
-      }
-   }
-
-   i {
-      color: $dark-black;
-      font-size: 2.5rem;
-      line-height: 1;
-      margin-bottom: 0.625rem;
-   }
-
-   span {
-      color: #c9d4eb;
-      text-transform: uppercase;
-      font-size: 0.875rem;
-   }
+.profile-transaction {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  margin: 0 20px;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: #000000b3;
 }
 
-// 360px
-@media (min-width: 360px) {
-   .profile-links {
-      flex-direction: row;
+.timestamp {
+  width: 50%;
+  font-size: 20px;
+}
 
-      a {
-         padding: 1.875rem 0.3125rem;
-      }
-   }
+.price {
+  width: 50%;
+  text-align: right;
+  font-size: 20px;
 }

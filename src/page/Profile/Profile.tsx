@@ -40,9 +40,10 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps> {
 const Profile: React.FC<Props> = (props) => {
   const { getStorage } = useLocalStorage();
   const navigate = useNavigate();
+  
   const { user } = useContext(userContext);
   const links = [
-    { href: "/panel/transfers", text: "Transfers", icon: "ion-card" },
+    { href: "/profile/deposit", text: "Deposit", icon: "ion-card" },
     {
       href: "/panel/change-details",
       text: "Change details",

@@ -33,7 +33,7 @@ const PayStack: FC = () => {
     email,
     amount,
     publicKey,
-    text: "Pay with Paystack",
+    text: "Deposit",
     onSuccess: () => {
       nunu();
     },

@@ -138,13 +138,18 @@ const Logincontent: React.FC = () => {
               <Input
                 placeholder="Email..."
                 required
+                id="email"
+                title="email"
                 onChange={(event) => {
                   setLoginEmail(event.target.value);
                 }}
               />
               <Input
                 placeholder="Password..."
+                type="password"
                 required
+                id="password"
+                title="password"
                 onChange={(event) => {
                   setLoginPassword(event.target.value);
                 }}

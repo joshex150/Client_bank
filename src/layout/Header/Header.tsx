@@ -56,6 +56,7 @@ const Header = () => {
             height="30px"
             viewBox="0 0 250 50"
             xmlns="http://www.w3.org/2000/svg"
+            style={{width:"50%"}}
           >
             <g fill-rule="nonzero" fill="none">
               <path

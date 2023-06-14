@@ -45,7 +45,7 @@ export default function Slider() {
        {sliderData.map((slider, i) => (
         <SwiperSlide
           key={i}
-          style={{ background: `url(${slider.imgUrl})` }}
+          style={{ background: `url(${slider.imgUrl})`, backgroundSize: "cover" }}
           className="slider-item"
         >
           <div className="slider-item__content">

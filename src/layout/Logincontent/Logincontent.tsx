@@ -28,7 +28,12 @@ const Logincontent: React.FC = () => {
   const login = async () => {
     try {
       setLoading(true);
-  
+      if (loginPassword.length < 6) {
+        toast('Password must be at least 6 characters long');
+        return;
+      } else {
+        
+      }
       const response = await fetch("https://api-bank-xi.vercel.app/login", {
         method: "POST",
         headers: {
@@ -110,14 +115,6 @@ const Logincontent: React.FC = () => {
     }
   };
   
-
-  const anon = async () => {
-    try {
-      setLoading(true);
-    } catch (error) {
-      setLoading(false);
-    }
-  };
   return (
     <div className="login-background">
       <Login>

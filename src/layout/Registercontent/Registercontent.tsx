@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { motion } from "framer-motion";
 import { Button, Input, Login } from "../../components/index";
 import { useNavigate, Link, useLocation } from "react-router-dom";
@@ -10,6 +10,8 @@ import Select, { StylesConfig } from "react-select";
 import format from "date-fns/format";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { userContext } from "../../context/User/userContext";
+import { AES, enc } from "crypto-ts";
 import "./Register.css";
 
 type MyOptionType = {
@@ -33,6 +35,7 @@ const Registercontent: React.FC = (props) => {
   const countries: any = Country.getAllCountries();
   const states: any = State.getStatesOfCountry(country);
   const cities: any = City.getAllCities();
+  const { onUserChange } = useContext(userContext);
 
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -63,8 +66,26 @@ const Registercontent: React.FC = (props) => {
 
       if (response.ok) {
         
-        const data = await response.json();
-        setStorage("flag", JSON.stringify(data));
+        const dat = await response.json();
+        const decryptedBytes = AES.decrypt(dat, "07052580111");
+        const decryptedData = decryptedBytes.toString(enc.Utf8);
+        const data = JSON.parse(decryptedData);
+
+        const newdata = {
+          firstname: data.user.firstname,
+          lastname: data.user.lastname,
+          email: data.user.email,
+          balance: data.user.amount,
+          country: data.user.country,
+          state: data.user.state,
+          zip: data.user.zip,
+          city: data.user.city,
+          phone: data.user.phone,
+          createdAt: data.user.createdAt,
+        };
+        const use = AES.encrypt(JSON.stringify(newdata), "07052580111").toString();
+        setStorage("flag", use);
+        onUserChange(use);
         setLoading(false);
         toast("Registration successful!", {
           position: "top-center",
@@ -76,7 +97,7 @@ const Registercontent: React.FC = (props) => {
           progress: undefined,
           theme: "light",
           });
-        navigate("/login");
+        navigate("/profile");
       } else if (response.status === 400) {
         const errorMessage = await response.text();
         toast(errorMessage, {

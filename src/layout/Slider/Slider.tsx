@@ -9,7 +9,6 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { isMobile } from "react-device-detect";
 import "./Slider.css";
-
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper";
 
@@ -63,7 +62,7 @@ export default function Slider() {
             <div className="slider-item__content">
               <h2
                 className="slider-title"
-                style={{ zIndex: "9999", color: "white", position: "relative" }}
+                style={{ zIndex: "9999", color: "white", position: "relative", margin: "0px 11px" }}
               >
                 {slider.title}
               </h2>

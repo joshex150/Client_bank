@@ -45,7 +45,7 @@ const Header = () => {
         right: 0,
         top: 0,
         zIndex: 100000,
-        backgroundColor: pathname === "/" ? "transparent" : "white",
+        backgroundColor: show === true ? "transparent" : "white",
       }}
       className="header"
     >

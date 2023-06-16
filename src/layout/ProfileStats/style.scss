@@ -53,7 +53,9 @@ $headings-font-weight: 700;
   margin: 0 auto;
   max-width: 600px;
 }
-
+.col { 
+  background-color: black;
+}
 .button {
   flex-basis: calc(33.33% - 10px);
   max-width: 150px;

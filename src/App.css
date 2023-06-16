@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 #root {
-
+    font-family: 'Muli', sans-serif;
 }
+
+p span h1 h2 h3 h4 div {
+    font-family: 'Muli', sans-serif !important;
+  }

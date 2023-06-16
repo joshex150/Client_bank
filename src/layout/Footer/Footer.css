@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 :root {
   --primary: hsl(0, 0%, 0%);
   --Pale-Cyan: hsl(193, 100%, 96%);
@@ -7,7 +9,7 @@
 
 * {
   padding: 0px;
-  font-family: "Open Sans";
+  font-family: 'Muli', sans-serif;
 }
 
 .landing p {
@@ -17,14 +19,14 @@
 p {
   font-size: 18px;
   font-weight: 400;
-  font-family: "Open Sans";
+  font-family: 'Muli', sans-serif;
   color: var(--Blue);
 }
 
 h1 {
   text-align: none;
   font-weight: 600;
-  font-family: "Poppins";
+  font-family: 'Muli', sans-serif;
 }
 
 .button-sec {
@@ -72,7 +74,7 @@ span {
 .solo-card p {
   color: var(--Dark);
   font-weight: 700;
-  font-family: "Poppins";
+  font-family: 'Muli', sans-serif;
 }
 
 .footer {
@@ -110,7 +112,7 @@ html {
 }
 
 .footer__logo {
-  font-family: "Pacifico", cursive;
+  font-family: 'Muli', sans-serif;
   font-weight: 400;
   text-transform: lowercase;
   font-size: 1.5rem;

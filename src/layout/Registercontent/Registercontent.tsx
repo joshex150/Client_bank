@@ -140,8 +140,8 @@ const Registercontent: React.FC = (props) => {
     border: "0.1rem solid rgba(0, 0, 0, 0.2)",
     borderRadius: "0.5rem",
     marginTop: "-0.7px",
-    fontSize: "auto",
-    paddingLeft: "1rem",
+    fontSize: "13px",
+    paddingLeft: "16px",
     minHeight: "50.5px",
     minWidth: "174px",
   };

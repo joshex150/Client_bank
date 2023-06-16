@@ -4,7 +4,10 @@
   font-family: "Roboto";
   letter-spacing: 0.1rem;
 }
-
+.button {
+  border: 1px solid #220e38;
+  background: #40196d;
+}
 .contr {
   display: flex;
   flex-direction: row;
